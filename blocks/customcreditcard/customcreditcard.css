@@ -1,0 +1,121 @@
+.customcreditcard > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customcreditcard > ul > li {
+  border: 1px solid var(--dark-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Bootstrap classes */
+  class: 'card mb-3';
+}
+
+.customcreditcard > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.customcreditcard .customcreditcard-card-body {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Bootstrap classes */
+  class: 'card-body';
+}
+
+.customcreditcard .customcreditcard-card-image {
+  line-height: 0;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Bootstrap classes */
+  class: 'card-img-top';
+}
+
+.customcreditcard .customcreditcard-card-body > *:first-child {
+  margin-top: 0;
+}
+
+.customcreditcard > ul > li img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.customcreditcard .customcreditcard-card-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.customcreditcard .customcreditcard-card-body ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.customcreditcard .customcreditcard-card-body ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.customcreditcard .customcreditcard-card-body:not(:first-child) p {
+  font-size: 14px;
+}
+
+.customcreditcard .customcreditcard-card-body:nth-child(3) {
+  align-items: center;
+  text-align: center;
+  gap: 4px; /* Adjust gap for third row */
+}
+
+.customcreditcard .customcreditcard-card-body:not(:nth-child(3)) {
+  gap: 20px; /* Adjust gap for other rows */
+}
+
+.customcreditcard .customcreditcard-card-body h1 {
+  font-size: 16px; /* Reduced font size */
+  font-weight: bold; /* Bold text */
+  margin-top: 0;
+}
+
+.customcreditcard .customcreditcard-card-body h1 + p {
+  margin-top: 4px; /* Reduce space between picture and h1 */
+}
+
+@media (max-width: 768px) {
+  .customcreditcard > ul > li {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customcreditcard > ul > li img {
+    max-width: 100%;
+  }
+
+  .customcreditcard .customcreditcard-card-body {
+    align-items: center;
+    text-align: center;
+  }
+
+  .customcreditcard .customcreditcard-card-body:nth-child(2),
+  .customcreditcard .customcreditcard-card-body:nth-child(4) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

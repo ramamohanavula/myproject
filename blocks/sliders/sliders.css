@@ -1,0 +1,166 @@
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  flex-wrap: wrap; /* Ensure tabs wrap on smaller screens */
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  flex: 1 1 auto; /* Allow tabs to grow and shrink */
+  text-align: center; /* Center align text in tabs */
+}
+
+.tab:hover {
+  background: #e9e9e9;
+  color: #000;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007BFF;
+  font-weight: bold;
+  background: #fff;
+  color: #007BFF;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+}
+
+.content {
+  display: none;
+  flex-wrap: wrap; /* Ensure columns wrap to the next row */
+  gap: 20px;
+}
+
+.column {
+  flex: 1 1 30%; /* Allow columns to wrap and take up 30% of the row */
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Add space after each card */
+}
+
+.column.no-margin {
+  margin-bottom: 0; /* Remove margin for "All cards" tab */
+}
+
+.column p, .column h4, .column ul, .column .button-container {
+  font-size: 14px; /* Adjust text size */
+}
+
+.button-container {
+  display: inline-block;
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.button-container .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.button-container .button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 45%; /* Adjust column width for tablets */
+  }
+
+  .list-item {
+    flex-direction: column; /* Stack image and text vertically on tablets */
+    align-items: flex-start;
+  }
+
+  .list-item img {
+    max-width: 100%; /* Make image full width on tablets */
+    height: auto;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .list-item .text-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    flex: 1 1 100%; /* Adjust column width for mobile devices */
+  }
+
+  .list-item {
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    align-items: flex-start;
+  }
+
+  .list-item img {
+    max-width: 100%; /* Make image full width on mobile */
+    height: auto;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .list-item .text-content {
+    margin-left: 0;
+  }
+}
+
+.column h4 {
+  color: rgb(255, 157, 0);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-item .img-wrapper {
+  flex: 0 0 auto;
+}
+
+.list-item img {
+  max-width: 200px; /* Increase image size */
+  height: auto;
+  padding-right: 10px;
+}
+
+.list-item .text-content {
+  flex: 1;
+  font-size: 14px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align text vertically */
+}
+
+.list-item h4 {
+  color: orange; /* Set h4 color to orange in All cards tab */
+}
+
+.list-item p, .list-item ul, .list-item .button-container {
+  margin: 0; /* Remove spacing between lines */
+}
